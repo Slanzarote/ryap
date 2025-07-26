@@ -1,0 +1,48 @@
+<!-- reserva.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva tu estancia | RYAP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reserva-container">
+    <h1>Reserva tu estancia</h1>
+    <form id="form-reserva">
+      <label>Nombre completo: <input type="text" name="nombre" required></label>
+      <label>Email de contacto: <input type="email" name="email" required></label>
+      <label>Teléfono: <input type="tel" name="telefono"></label>
+
+      <label>¿Qué piso deseas reservar?
+        <select name="piso" required>
+          <option value="">-- Selecciona --</option>
+          <option value="puerta_real">RYAP Puerta Real</option>
+          <option value="isabel_catolica">RYAP Isabel la Católica</option>
+        </select>
+      </label>
+
+      <label>Fecha de entrada: <input type="date" name="fecha_entrada" required></label>
+      <label>Fecha de salida: <input type="date" name="fecha_salida" required></label>
+
+      <label>Comentarios adicionales:
+        <textarea name="comentarios" rows="4"></textarea>
+      </label>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+
+    <div id="mensaje-confirmacion" style="display:none; margin-top:20px;">
+      <strong>¡Gracias!</strong> Hemos recibido tu solicitud. Te contactaremos pronto.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('form-reserva').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('mensaje-confirmacion').style.display = 'block';
+      this.reset(); // Borra el formulario tras enviar
+    });
+  </script>
+</body>
+</html>
