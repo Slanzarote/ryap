@@ -1,57 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RYAP Isabel la Católica</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>RYAP Isabel la Católica</h1>
-    <p>Alquiler turístico por días en Granada</p>
+    <p>Alquiler turístico por días en el centro de Granada</p>
   </header>
 
-  <main class="apartment-page">
+  <main>
     <section class="gallery">
-      <img src="img/isabel1.jpg" alt="Salón">
-      <img src="img/isabel2.jpg" alt="Dormitorio">
-      <img src="img/isabel3.jpg" alt="Baño">
+      <img src="images/isabel1.jpg" alt="Salón del apartamento">
+      <img src="images/isabel2.jpg" alt="Dormitorio principal">
+      <img src="images/isabel3.jpg" alt="Cocina equipada">
     </section>
 
-    <section class="info">
+    <section class="description">
       <h2>Descripción</h2>
-      <p>Apartamento de 2 dormitorios y 1 sofá cama en el centro. WiFi, aire acondicionado, cocina privada, baño, TV, etc.</p>
+      <p>
+        Apartamento amplio y luminoso de 90 m² en la céntrica calle Isabel la Católica, junto a la Catedral de Granada.
+        Ideal para familias o grupos de hasta 4 personas. Con cocina privada, WiFi gratuito, aire acondicionado, calefacción
+        y todos los servicios esenciales.
+      </p>
+    </section>
 
-      <h2>Servicios</h2>
+    <section class="features">
+      <h2>Servicios incluidos</h2>
       <ul>
-        <li>90 m² · 2 dormitorios</li>
-        <li>Cocina equipada</li>
-        <li>Aire acondicionado</li>
-        <li>WiFi gratis</li>
-        <li>Baño privado</li>
+        <li>✅ 2 Dormitorios (1 cama doble + 2 individuales)</li>
+        <li>✅ Sofá cama en salón</li>
+        <li>✅ Baño privado</li>
+        <li>✅ Cocina totalmente equipada</li>
+        <li>✅ Aire acondicionado y calefacción</li>
+        <li>✅ WiFi gratuito</li>
+        <li>✅ Parking público cercano</li>
       </ul>
+    </section>
 
-      <h2>Disponibilidad</h2>
-      <p><strong>21-23 agosto:</strong> 259€ (no reembolsable) · 288€ (cancelación gratuita)</p>
-
-      <h2>Opiniones</h2>
-      <blockquote>"Apartamento precioso, limpio y bien ubicado. Yolanda encantadora." – Delgado, España</blockquote>
-
+    <section class="reservation">
       <h2>Reserva tu estancia</h2>
-      <form>
-        <label>Nombre: <input type="text" required></label><br/>
-        <label>Email: <input type="email" required></label><br/>
-        <label>Fecha entrada: <input type="date" required></label><br/>
-        <label>Fecha salida: <input type="date" required></label><br/>
-        <label>Número de personas: <input type="number" min="1" max="6" required></label><br/>
-        <button type="submit">Reservar</button>
-      </form>
+      <button id="mostrar-disponibilidad" class="btn">Reservar este alojamiento</button>
+
+      <div id="tabla-disponibilidad" style="display:none;">
+        <table class="availability-table">
+          <thead>
+            <tr>
+              <th>Fechas</th>
+              <th>Nº de personas</th>
+              <th>Precio</th>
+              <th>Opción</th>
+              <th>Reservar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21–23 ago</td>
+              <td>Hasta 4</td>
+              <td>259€<br><small>No reembolsable</small></td>
+              <td>Pago online</td>
+              <td><button class="btn-small">Reservar</button></td>
+            </tr>
+            <tr>
+              <td>21–23 ago</td>
+              <td>Hasta 4</td>
+              <td>288€<br><small>Cancelación gratis</small></td>
+              <td>Pago hasta el 14 ago</td>
+              <td><button class="btn-small">Reservar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>Ubicación</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Isabel+la+Cat%C3%B3lica+Granada&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 RYAP Granada</p>
+    <p>© 2025 RYAP Granada – Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    document.getElementById("mostrar-disponibilidad").addEventListener("click", function() {
+      const tabla = document.getElementById("tabla-disponibilidad");
+      tabla.style.display = tabla.style.display === "none" ? "block" : "none";
+    });
+  </script>
+
 </body>
 </html>

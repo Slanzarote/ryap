@@ -59,3 +59,34 @@ footer {
   margin-top: 3rem;
 }
 
+.availability-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.availability-table th,
+.availability-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.availability-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  background-color: #0071f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  background-color: #005dc1;
+}
+
